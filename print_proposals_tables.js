@@ -615,7 +615,7 @@ const main = async () => {
     let diff = Math.abs(
       new Date(item.end_date).getTime() - new Date(item.start_date).getTime()
     );
-    let daysDiff = Math.round(diff / 86400000) - 1;
+    let daysDiff = Math.round(diff / 86400000);
     let totalPay = numberFormatter.format(
       daysDiff * parseFloat(item.daily_pay).toFixed(3)
     );
